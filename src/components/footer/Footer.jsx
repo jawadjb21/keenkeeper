@@ -27,7 +27,7 @@ const Footer = () => {
                     </a>
                 </div>
             </nav>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            <p>Copyright © <Suspense fallback={<span>Loading date...</span>}>{new Date().getFullYear()}</Suspense> - All right reserved</p>
         </footer>
 
     );

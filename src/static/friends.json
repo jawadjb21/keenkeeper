@@ -5,7 +5,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "john.doe@example.com",
         "days_since_contact": 12,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "college",
             "close friend"
@@ -20,7 +20,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "emily.carter@example.com",
         "days_since_contact": 3,
-        "status": "on_track",
+        "status": "On track",
         "tags": [
             "work",
             "mentor"
@@ -35,7 +35,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "michael.lee@example.com",
         "days_since_contact": 25,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "gym",
             "friend"
@@ -50,7 +50,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "sophia.nguyen@example.com",
         "days_since_contact": 7,
-        "status": "due_soon",
+        "status": "Due Soon",
         "tags": [
             "college",
             "study buddy"
@@ -65,7 +65,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "daniel.smith@example.com",
         "days_since_contact": 1,
-        "status": "on_track",
+        "status": "On Track",
         "tags": [
             "family",
             "cousin"
@@ -80,7 +80,7 @@
         "picture": "https://i.ibb.co/mr5pWzSk/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
         "email": "olivia.brown@example.com",
         "days_since_contact": 18,
-        "status": "overdue",
+        "status": "Overdue",
         "tags": [
             "travel",
             "friend"
