@@ -4,3 +4,8 @@
 :root {
   --button-color: rgb(1, 37, 1); /* set a value "red" to the "color" variable */
 }
+
+
+.active-link{
+  background: rgb(1, 45, 1);
+}

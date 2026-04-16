@@ -1,11 +1,14 @@
+"use client";
 import React from 'react';
 import navLinks from "@/static/navLinks.json"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathname = usePathname();
     return (
         <>
-            <div className="navbar bg-base-100 shadow-sm px-10">
+            <div className="navbar bg-base-100 shadow-sm px-5 md:px-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +24,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
-                        {navLinks.map(link => <Link key={link.id} href={link.path}><button className="btn bg-green-900 text-white cursor-pointer">{link.icon} {link.name}</button></Link>)}
+                        {navLinks.map(link => <Link key={link.id} href={link.path}><button className={`${pathname === link.path ? 'active-link text-white' : ''} btn text-black cursor-pointer`}>{link.icon} {link.name}</button></Link>)}
                     </ul>
                 </div>
             </div>
