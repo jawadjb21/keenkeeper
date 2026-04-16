@@ -1,6 +1,9 @@
+"use client";
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Suspense } from 'react';
+
 
 const Footer = () => {
     return (
@@ -13,15 +16,15 @@ const Footer = () => {
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4 text-3xl">
-                    <Link href={"https://www.facebook.com"}>
+                    <a href={"https://www.facebook.com"}>
                         <FaFacebook />
-                    </Link>
-                    <Link href={"https://www.x.com"}>
+                    </a>
+                    <a href={"https://www.x.com"}>
                         <FaTwitter />
-                    </Link>
-                    <Link href={"https://www.youtube.com"}>
+                    </a>
+                    <a href={"https://www.youtube.com"}>
                         <FaYoutube />
-                    </Link>
+                    </a>
                 </div>
             </nav>
             <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
