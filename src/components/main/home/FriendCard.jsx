@@ -11,16 +11,44 @@ const FriendCard = ({ friend }) => {
     }
     return (
         <Link href={`/${friend.id}`}>
-            <div className='border border-mist-500 shadow rounded-xl flex flex-col justify-center items-center gap-3 space-y-1.5 py-4'>
-                <Image className='rounded-full' src={friend.picture} alt='Image of the friend' width={100} height={50}></Image>
-                <p className='font-bold text-2xl'>{friend.name}</p>
-                <p>{friend.days_since_contact}d ago</p>
-                <div className='flex justify-between items-center gap-2'>
-                    {
-                        friend.tags.map((tag, index) => <p key={index} className='bg-green-300 rounded-2xl px-4'>{tag}</p>)
-                    }
+            <div className='border border-gray-300 rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center gap-3 w-65 cursor-pointer'>
+
+                {/* Avatar */}
+                <Image
+                    className='rounded-full border border-gray-300'
+                    src={friend.picture}
+                    alt='Image of the friend'
+                    width={90}
+                    height={90}
+                />
+
+                {/* Name */}
+                <p className='font-semibold text-xl'>{friend.name}</p>
+
+                {/* Days since contact */}
+                <p className='text-sm text-gray-500'>
+                    {friend.days_since_contact} days ago
+                </p>
+
+                {/* Tags */}
+                <div className='flex flex-wrap justify-center gap-2'>
+                    {friend.tags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className='text-xs bg-gray-100 border border-gray-300 rounded-full px-3 py-1'
+                        >
+                            {tag}
+                        </span>
+                    ))}
                 </div>
-                <p className={`${statusColor} rounded-xl px-4 py-2`}>{friend.status}</p>
+
+                {/* Status */}
+                <div className='w-full flex justify-center pt-2 border-t'>
+                    <span className={`${statusColor} text-white text-sm rounded-full px-4 py-1 border border-gray-300`}>
+                        {friend.status}
+                    </span>
+                </div>
+
             </div>
         </Link>
     );
