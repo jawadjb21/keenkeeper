@@ -5,12 +5,7 @@ import Link from 'next/link';
 const Navbar = () => {
     return (
         <>
-            {/* <div className='flex justify-between items-center px-6 py-2 bg-amber-50'>
-
-                <div>
-                    <ul className='list-none flex justify-between items-center gap-2'> */}
-
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 shadow-sm px-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
-                        {navLinks.map(link => <Link key={link.id} href={link.path}><button className="btn btn-success text-white cursor-pointer">{link.icon} {link.name}</button></Link>)}
+                        {navLinks.map(link => <Link key={link.id} href={link.path}><button className="btn bg-green-900 text-white cursor-pointer">{link.icon} {link.name}</button></Link>)}
                     </ul>
                 </div>
             </div>

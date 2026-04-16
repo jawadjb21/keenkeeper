@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+:root {
+  --button-color: rgb(1, 37, 1); /* set a value "red" to the "color" variable */
+}

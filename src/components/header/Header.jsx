@@ -5,7 +5,6 @@ import Banner from './Banner';
 const Header = () => {
     return (
         <div className='flex flex-col justify-center items-center gap-4'>
-            <Navbar></Navbar>
             <Banner></Banner>
         </div>
     );
