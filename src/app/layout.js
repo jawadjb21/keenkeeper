@@ -4,6 +4,7 @@ import Navbar from "@/components/header/Navbar";
 import Footer from "@/components/footer/Footer";
 import FriendsActionsProvider from "@/hooks/handleFriendActions";
 import { ToastContainer, toast } from 'react-toastify';
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,10 @@ export default function RootLayout({ children }) {
       data-theme="light"
     >
       <body className="min-h-full flex flex-col container mx-auto">
-        <Navbar></Navbar>
         <FriendsActionsProvider>
+          <Suspense fallback={null}>
+            <Navbar></Navbar>
+          </Suspense>
           {children}
           <ToastContainer />
         </FriendsActionsProvider>
