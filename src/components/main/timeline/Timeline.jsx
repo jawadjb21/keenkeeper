@@ -18,7 +18,7 @@ const Timeline = () => {
 
             <div className='flex flex-col justify-center items-center gap-y-2'>
                 {
-                    friendsActions.map((entry, idx) => <TimelineCard key={idx} action={entry.action} friend={entry.friend}></TimelineCard>)
+                    friendsActions.map((entry, idx) => <TimelineCard key={idx} action={entry.action} friend={entry.friend} date={entry.date}></TimelineCard>)
                 }
             </div>
         </div>
