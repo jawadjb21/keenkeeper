@@ -7,8 +7,8 @@ export const FriendsActionsContext = createContext();
 const FriendsActionsProvider = ({ children }) => {
     const [friendsActions, setFriendsActions] = useState([]);
 
-    const handleFriendsActions = ( action, friend ) => {
-        const newAction = { "action": action, "friend": friend };
+    const handleFriendsActions = ( action, friend, date ) => {
+        const newAction = { "action": action, "friend": friend, "date": date };
         const newActions = [...friendsActions, newAction];
         setFriendsActions(newActions);
     }
