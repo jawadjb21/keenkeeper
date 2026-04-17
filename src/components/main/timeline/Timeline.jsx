@@ -7,7 +7,7 @@ const Timeline = () => {
     const { friendsActions } = useContext(FriendsActionsContext);
     console.log(friendsActions);
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center gap-y-5'>
             <h1 className='font-bold text-3xl'>Timeline</h1>
             <select defaultValue="Filter Timeline" className="select select-ghost">
                 <option disabled={true}>Filter Timeline</option>
@@ -16,7 +16,7 @@ const Timeline = () => {
                 <option>Text</option>
             </select>
 
-            <div className='flex flex-col justify-center items-center gap-y-2'>
+            <div className='flex flex-col justify-center items-center gap-y-2 my-3'>
                 {
                     friendsActions.map((entry, idx) => <TimelineCard key={idx} action={entry.action} friend={entry.friend} date={entry.date}></TimelineCard>)
                 }
