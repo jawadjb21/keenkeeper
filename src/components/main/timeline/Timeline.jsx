@@ -5,7 +5,7 @@ import TimelineCard from './TimelineCard';
 
 const Timeline = () => {
     const { friendsActions } = useContext(FriendsActionsContext);
-    console.log(friendsActions);
+
     return (
         <div className='flex flex-col justify-center items-center gap-y-5'>
             <h1 className='font-bold text-3xl'>Timeline</h1>

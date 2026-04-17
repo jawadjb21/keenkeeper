@@ -4,7 +4,6 @@ import { IoIosText } from "react-icons/io";
 import { FaVideo } from "react-icons/fa";
 
 const TimelineCard = ({ action, friend, date }) => {
-    console.log(date);
     const actionIcon = action.toLowerCase() === "call" ? <MdAddCall /> : action.toLowerCase() === "video" ? <FaVideo/> : <IoIosText/>
     return (
         <div className='w-100 flex justify-start items-center gap-4 text-left border border-gray-300 rounded-xl p-6 shadow-sm'>
