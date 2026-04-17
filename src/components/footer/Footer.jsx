@@ -2,10 +2,15 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 
 
 const Footer = () => {
+    const [year, setYear] = useState(null);
+
+    React.useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
     return (
         <footer className="footer footer-horizontal footer-center bg-green-900 text-primary-content p-10">
             <aside>
@@ -27,7 +32,7 @@ const Footer = () => {
                     </a>
                 </div>
             </nav>
-            <p>Copyright © <Suspense fallback={<span>Loading date...</span>}>{new Date().getFullYear()}</Suspense> - All right reserved</p>
+            <p>Copyright © {year} - All right reserved</p>
         </footer>
 
     );

@@ -5,7 +5,7 @@ import Friends from '@/components/main/home/Friends';
 
 
 export default async function Home() {
-  cacheLife("hours");
+  cacheLife("weeks");
 
   return (
     <>

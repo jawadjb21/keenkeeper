@@ -4,11 +4,8 @@ import Link from 'next/link';
 
 const FriendCard = ({ friend }) => {
     const { status } = friend;
-    console.log(status);
     const statusColor = status === "On track" ? "bg-green-500" : status === "Overdue" ? "bg-red-500" : "bg-yellow-300"
-    const handleClick = () => {
 
-    }
     return (
         <Link href={`/${friend.id}`}>
             <div className='border border-gray-300 rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center gap-3 w-65 cursor-pointer'>
@@ -20,6 +17,7 @@ const FriendCard = ({ friend }) => {
                     alt='Image of the friend'
                     width={90}
                     height={90}
+                    loading='eager'
                 />
 
                 {/* Name */}

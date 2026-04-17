@@ -1,11 +1,14 @@
 import FriendDetails from '@/components/main/Details/FriendDetails';
-import React from 'react';
+import FriendsActionsProvider from '@/hooks/handleFriendActions';
+import React, { Suspense } from 'react';
 
 const FriendDetailPage = async ({ params }) => {
-    const {friendId} = await params;
+    const { friendId } = await params;
     return (
         <div>
-            <FriendDetails friendId={friendId}></FriendDetails>
+            <FriendsActionsProvider>
+                <FriendDetails friendId={friendId}></FriendDetails>
+            </FriendsActionsProvider>
         </div>
     );
 };
