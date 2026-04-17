@@ -8,7 +8,7 @@ const FriendCard = ({ friend }) => {
 
     return (
         <Link href={`/${friend.id}`}>
-            <div className='border border-gray-300 rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center gap-3 w-65 cursor-pointer'>
+            <div className='border border-gray-300 rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center gap-3 w-50 cursor-pointer'>
 
                 {/* Avatar */}
                 <Image
